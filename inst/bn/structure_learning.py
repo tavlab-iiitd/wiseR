@@ -6,7 +6,8 @@ import argparse
 
 
 def StructureLearning(data_path, method, bootstraps):
-	data = pd.read_csv(data_path)
+	#data = pd.read_csv(data_path)
+	data = data_path
 	non_numeric_columns = list(data.select_dtypes(exclude=[np.number]).columns)
 	if non_numeric_columns:
 		le = LabelEncoder()

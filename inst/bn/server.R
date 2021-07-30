@@ -3048,7 +3048,7 @@ shinyServer(function(input, output,session) {
           colnames<- list(colnames(df))
           r_iter <- as.integer(no.of.bootstraps)
           reticulate::source_python('file.py')
-          bootstrap(df,col,colnames,r_iter)
+          StructureLearning(df,input$gnnmethod,r_iter)
           externalGraphEdges=read.csv('gnn.csv',stringsAsFactors = T,na.strings = c("NA","na","Na","nA","","?","-"))
           externalGraphEdges<<-as.data.frame(externalGraphEdges)
           nodeCheck = unique(as.vector(as.matrix(externalGraphEdges)))
