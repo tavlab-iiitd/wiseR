@@ -17,7 +17,7 @@ class CONFIG:
     c_A = 1
     use_A_connect_loss = 0
     use_A_positiver_loss = 0
-    no_cuda = False
+    no_cuda = True
     seed = 42
     encoder_hidden = 64
     decoder_hidden = 64
