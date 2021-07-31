@@ -3047,7 +3047,7 @@ shinyServer(function(input, output,session) {
           col<- ncol(df)
           colnames<- list(colnames(df))
           r_iter <- as.integer(input$bootGNN)
-          reticulate::source_python('file.py')
+          reticulate::source_python('structure_learning.py.py')
           print(1)
           # Create a Progress object
           progress <- shiny::Progress$new()
