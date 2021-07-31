@@ -3039,7 +3039,7 @@ shinyServer(function(input, output,session) {
 
           # Get the selected learning algorithm from the user and learn the network
           library(reticulate)
-          sys.setenv(RETICULATE_PYTHON = input$pythonENV)
+          Sys.setenv(RETICULATE_PYTHON = input$pythonENV)
           use_condaenv(input$condaENV,required = T)
           #use_condaenv("wiser",required = T)
           py_config()
