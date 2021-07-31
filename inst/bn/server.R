@@ -3046,7 +3046,7 @@ shinyServer(function(input, output,session) {
           df<- DiscreteData
           col<- ncol(df)
           colnames<- list(colnames(df))
-          r_iter <- as.integer(no.of.bootstraps)
+          r_iter <- as.integer(input$bootGNN)
           reticulate::source_python('file.py')
           print(1)
           # Create a Progress object
