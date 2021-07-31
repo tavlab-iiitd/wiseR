@@ -12,19 +12,8 @@ def StructureLearning(data_path, method, bootstraps):
 	if non_numeric_columns:
 		le = LabelEncoder()
 		for col in non_numeric_columns:
-			struct_data[col] = le.fit_transform(data[col])
+			data[col] = le.fit_transform(data[col])
 	if method == "DAG_GNN":
 		DAG_GNN(data, int(bootstraps))
 	elif method == "NoTears":
 		noTears(data, int(bootstraps))
-
-
-
-
-# if __name__ == "__main__":
-# 	ap = argparse.ArgumentParser()
-# 	ap.add_argument("-d", "--dataset", required=True)
-# 	ap.add_argument("-i", "--iterations", required = True)
-# 	ap.add_argument("-m", "--method", required = True)
-# 	args = vars(ap.parse_args())
-# 	StructureLearning(args["dataset"],args["method"],args["iterations"])
