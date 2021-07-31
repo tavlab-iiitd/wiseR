@@ -3047,13 +3047,9 @@ shinyServer(function(input, output,session) {
           col<- ncol(df)
           colnames<- list(colnames(df))
           r_iter <- as.integer(input$bootGNN)
-          reticulate::source_python('structure_learning.py.py')
+          reticulate::source_python('structure_learning.py')
           print(1)
           # Create a Progress object
-          progress <- shiny::Progress$new()
-          # Make sure it closes when we exit this reactive, even if there's an error
-          on.exit(progress$close())
-          progress$set(message = "Learning network structure", value = 0)
           StructureLearning(df,input$gnnmethod,r_iter)
           print(2)
           externalGraphEdges=read.csv('gnn.csv',stringsAsFactors = T,na.strings = c("NA","na","Na","nA","","?","-"))
