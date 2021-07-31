@@ -58,7 +58,7 @@ dashboardPage(skin = "blue",
                                            ),
                                            menuItem(text = "",
                                                     icon = shiny::icon("github"),
-                                                    href = "https://github.com/SAFE-ICU/wiseR"),
+                                                    href = "https://github.com/tavlab-iiitd/wiseR"),
                                           menuItem(text = "",
                                                     icon = shiny::icon("info"),
                                                   tabName = "About")

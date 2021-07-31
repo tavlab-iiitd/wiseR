@@ -1,4 +1,4 @@
-from file import *
+from dag_gnn import *
 from notears import *
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
