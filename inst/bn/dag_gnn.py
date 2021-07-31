@@ -189,7 +189,7 @@ def train(train_loader, col,epoch, best_val_loss, lambda_A, c_A, optimizer,encod
 # main
 # ===================================
 def bootstrap(data_path, iter = 1):
-    df = pd.read_csv(data_path)
+    df = data_path
     ncol = len(df.columns)
     colnames = df.columns
     final_mat = np.zeros((ncol,ncol))
