@@ -12,12 +12,6 @@ from causalnex.plots import plot_structure, NODE_STYLE, EDGE_STYLE
 
 
 
-dir = "./resutls_new_sachs_/"
-if not os.path.exists(dir):
-	os.makedirs(dir)
-
-
-
 def noTears(data, bootstraps):
 	struct_data =data
 	edge_list = []
@@ -53,4 +47,4 @@ def noTears(data, bootstraps):
 			edgeL.append(item)
 			
 			
-	pd.DataFrame(edgeL).to_csv("Final_Notears_Edgelist.csv", index = False)
+	pd.DataFrame(edgeL).to_csv("gnn.csv", index = False)

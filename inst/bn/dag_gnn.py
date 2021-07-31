@@ -400,11 +400,3 @@ def bootstrap(data_path, iter = 1):
     edgelist.insert(0,["from","to"])
     edgelist_df=pd.DataFrame(edgelist)
     edgelist_df.to_csv("gnn.csv",index=False,header=False)
-
-    # with open("gnn.csv", "w",newline="") as csvfile:
-    #     write = csv.writer(csvfile)
-    #     write.writerows(["from","to"])
-    #     write.writerows(edgelist)
-    return
-
-bootstrap("sachs_data.csv", int(11))
