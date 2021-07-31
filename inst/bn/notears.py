@@ -23,8 +23,6 @@ def noTears(data, bootstraps):
 		edge_list.extend((list(sm.edges)))
 	freq = {}
 	for item in edge_list:
-		print(type(item))
-		print(item)
 		if (item in freq):
 			freq[item] += 1
 		else:
@@ -32,7 +30,7 @@ def noTears(data, bootstraps):
 
 	edgeL = []		
 	for item in freq:
-		if freq[item] > 16:
+		if freq[item] > bootstraps // 2:
 			edgeL.append(item)
 			
 			
