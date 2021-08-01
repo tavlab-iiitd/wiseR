@@ -400,6 +400,4 @@ def DAG_GNN(data, iter = 1):
     edgelist.insert(0,["from","to"])
     edgelist_df=pd.DataFrame(edgelist)
     edgelist_df.to_csv("gnn.csv",index=False,header=False)
-    
-    return 
 

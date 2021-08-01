@@ -32,6 +32,7 @@ def noTears(data, bootstraps):
 	for item in freq:
 		if freq[item] > bootstraps // 2:
 			edgeL.append(item)
-			
-			
-	pd.DataFrame(edgeL).to_csv("gnn.csv", index = False)
+	
+	edgeL.insert(0,["from","to"])			
+	pd.DataFrame(edgeL).to_csv("gnn.csv",index=False,header=False)
+	print(edgeL)

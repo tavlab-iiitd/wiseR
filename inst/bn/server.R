@@ -3049,12 +3049,14 @@ shinyServer(function(input, output,session) {
           r_iter <- as.integer(input$bootGNN)
           reticulate::source_python('structure_learning.py')
           print(1)
-          # Create a Progress object
           StructureLearning(df,input$gnnmethod,r_iter)
           print(2)
           externalGraphEdges=read.csv('gnn.csv',stringsAsFactors = T,na.strings = c("NA","na","Na","nA","","?","-"))
+          print(externalGraphs)
           externalGraphEdges<<-as.data.frame(externalGraphEdges)
+          print(externalGraphs)
           nodeCheck = unique(as.vector(as.matrix(externalGraphEdges)))
+          print(nodeCheck)
           dag= empty.graph(nodeCheck)
           for(elem in 1:nrow(externalGraphEdges))
           {
