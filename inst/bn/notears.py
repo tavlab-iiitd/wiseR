@@ -19,7 +19,7 @@ def noTears(data, bootstraps):
 	for i in range(0, bootstraps):
 		boot = resample(struct_data, replace=True, n_samples=len(struct_data))
 		sm  = from_pandas(boot)
-		sm.remove_edges_below_threshold(0.3)
+		#sm.remove_edges_below_threshold(0.3)
 		edge_list.extend((list(sm.edges)))
 	freq = {}
 	for item in edge_list:
