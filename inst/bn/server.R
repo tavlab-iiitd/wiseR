@@ -3052,11 +3052,8 @@ shinyServer(function(input, output,session) {
           StructureLearning(df,input$gnnmethod,r_iter)
           print(2)
           externalGraphEdges=read.csv('gnn.csv',stringsAsFactors = T,na.strings = c("NA","na","Na","nA","","?","-"))
-          print(externalGraphEdges)
           externalGraphEdges<<-as.data.frame(externalGraphEdges)
-          print(externalGraphEdges)
           nodeCheck = unique(as.vector(as.matrix(externalGraphEdges)))
-          print(nodeCheck)
           dag= empty.graph(nodeCheck)
           for(elem in 1:nrow(externalGraphEdges))
           {
