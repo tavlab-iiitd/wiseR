@@ -1,3 +1,5 @@
+source('dependency.R')
+dependency()
 library('bnlearn')
 library('shiny')
 library('shinydashboard')
@@ -20,7 +22,6 @@ source('custom.Modules.R')
 source('tooltip.R')
 source('dashboardthemes.R')
 source('graph.weight.R')
-source('dependency.R')
 source('custom.Modules.assoc.R')
 
 shinyServer(function(input, output,session) {
