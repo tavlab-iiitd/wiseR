@@ -13,7 +13,6 @@ library('arules')
 library('psych')
 library("DT")
 library("linkcomm")
-library('igraph')
 library("shinyBS")
 library("HydeNet")
 source('error.bar.R')
@@ -28,6 +27,7 @@ shinyServer(function(input, output,session) {
   withProgress(message = "Starting app for the first time, installing one-time dependencies, please be patient...", value = 0, {
     dependency()
   })
+  library('igraph')
   library('gRain')
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
