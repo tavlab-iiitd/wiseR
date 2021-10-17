@@ -1,3 +1,5 @@
+source('dependency.R')
+dependency()
 library('bnlearn')
 library('rhandsontable')
 library('shiny')
