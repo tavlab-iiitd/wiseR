@@ -6,7 +6,7 @@ library('shinyWidgets')
 library("shinyBS")
 library('shinyalert')
 library('rintrojs')
-#library('igraph')
+library('igraph')
 library("HydeNet")
 library("rhandsontable")
 source('error.bar.R')
@@ -247,10 +247,10 @@ dashboardPage(skin = "blue",
                                                                                                   selectInput('assocFont',label = "Node Font",choices = c(1:100),selected = 20)
                                                                                               ),
                                                                                               shiny::fluidRow(shiny::column(6,downloadButton("aSave","Save Graph as html")),shiny::column(6,actionButton("cytoAssoc","Export to Cytoscape",class="butt"))),
-                                                                                              label = "Visual Settings",circle = F, status = "primary", icon = icon("gear"), width = "500px",tooltip = tooltipOptions(title = "graph visualization settings")
+                                                                                              label = "Visual Settings",circle = F, status = "primary", icon = icon("cog"), width = "500px",tooltip = tooltipOptions(title = "graph visualization settings")
                                                                                             )
                                                                               ),
-                                                                              shiny::column(1,bsButton('graphBtn2', 'Refresh', icon = icon("refresh"),style = "primary")),
+                                                                              shiny::column(1,bsButton('graphBtn2', 'Refresh', icon = icon("sync-alt"),style = "primary")),
                                                                               shiny::column(2,
                                                                                             div(style = "position:absolute;right:0.1em;",
                                                                                                 h5("Nth neighbors(of selection):"))),
@@ -477,7 +477,7 @@ dashboardPage(skin = "blue",
                                                                                 textInput("numInterval", label = NULL,placeholder = 25),
                                                                                 selectInput('plotFont',label = "axis label font size",choices = c(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10),selected = 1.5),
                                                                                 selectInput('valueFont',label = "plot value font size",choices = c(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10),selected = 1.5),
-                                                                                label = "Inference Learning",circle = F, status = "primary", icon = icon("bar-chart-o"), width = "500px",tooltip = tooltipOptions(title = "Learn Inferences")
+                                                                                label = "Inference Learning",circle = F, status = "primary", icon = icon("chart-bar"), width = "500px",tooltip = tooltipOptions(title = "Learn Inferences")
                                                                               )),
                                                                               shiny::column(7,shinyWidgets::radioGroupButtons(inputId = "bayesianOption",
                                                                                                                               choices = c("Bayesian Network","Consensus Plot","Fitted Local Distributions", "Infer Decisions","Export Tables"),
@@ -543,10 +543,10 @@ dashboardPage(skin = "blue",
                                                                                                                   selectInput('bayesFont',label = "Node Font",choices = c(1:100),selected = 20)
                                                                                                               ),
                                                                                                               shiny::fluidRow(shiny::column(6,downloadButton("bSave","Save Graph as html")),shiny::column(6,actionButton("cytoBayes","Export to Cytoscape",class="butt"))),
-                                                                                                              label = "Visual Settings",circle = F, status = "primary", icon = icon("gear"), width = "400px",tooltip = tooltipOptions(title = "graph settings")
+                                                                                                              label = "Visual Settings",circle = F, status = "primary", icon = icon("cog"), width = "400px",tooltip = tooltipOptions(title = "graph settings")
                                                                                                             )
                                                                                               ),
-                                                                                              shiny::column(1, bsButton('graphBtn', 'Refresh', icon = icon("refresh"),style = "primary"))),
+                                                                                              shiny::column(1, bsButton('graphBtn', 'Refresh', icon = icon("sync-alt"),style = "primary"))),
 
                                                                                             shinycssloaders::withSpinner(visNetworkOutput("netPlot",height = "480px"), color= "#2E86C1")
                                                                                             )
@@ -556,7 +556,7 @@ dashboardPage(skin = "blue",
                                                                               dropdownButton(
                                                                                 sliderInput("NumBar", label = "No. of bars",min = 0, max = 1,value = 1,step=1),
                                                                                 actionButton("sortPlot","Sort X-axis", class = "butt"),
-                                                                                label = "Plot",circle = F, status = "primary", icon = icon("gear"), width = "400px",tooltip = tooltipOptions(title = "plot settings")
+                                                                                label = "Plot",circle = F, status = "primary", icon = icon("cog"), width = "400px",tooltip = tooltipOptions(title = "plot settings")
                                                                               ),
                                                                               shinycssloaders::withSpinner(plotOutput("distPlot",height = "450px"), color="#2E86C1")
                                                                             ),
@@ -597,7 +597,7 @@ dashboardPage(skin = "blue",
                                                                                 shiny::fluidRow(shiny::column(6,actionButton("set_policy","Best Policy",class="butt"))),
                                                                                 br(),
 
-                                                                                label = "Build Network",circle = F, status = "primary", icon = icon("gear"), width = "500px",tooltip = tooltipOptions(title = "Build Network")
+                                                                                label = "Build Network",circle = F, status = "primary", icon = icon("cog"), width = "500px",tooltip = tooltipOptions(title = "Build Network")
                                                                               ))),
                                                                             shinycssloaders::withSpinner(visNetworkOutput("decisionPlot",height = "450px"),color="#2E86C1")
                                                                           ),
