@@ -10,6 +10,50 @@ dependency<-function()
   {
     install.packages('igraph',type = "binary")
   }
+  if(require('bnlearn')==F)
+  {
+    install.packages('bnlearn',type = "binary")
+  }
+  if(require('HydeNet')==F)
+  {
+    install.packages('HydeNet',type = "binary")
+  }
+  if(require('rhandsontable')==F)
+  {
+    install.packages('rhandsontable',type = "binary")
+  }
+  if(require('visNetwork')==F)
+  {
+    install.packages('visNetwork',type = "binary")
+  }
+  if(require('missRanger')==F)
+  {
+    install.packages('missRanger',type = "binary")
+  }
+  if(require('arules')==F)
+  {
+    install.packages('arules',type = "binary")
+  }
+  if(require('psych')==F)
+  {
+    install.packages('psych',type = "binary")
+  }
+  if(require('DescTools')==F)
+  {
+    install.packages('DescTools',type = "binary")
+  }
+  if(require('DT')==F)
+  {
+    install.packages('DT',type = "binary")
+  }
+  if(require('linkcomm')==F)
+  {
+    install.packages('linkcomm',type = "binary")
+  }
+  if(require('reticulate')==F)
+  {
+    install.packages('reticulate',type = "binary")
+  }
   if(require('RBGL')==F)
   {
     BiocManager::install('RBGL')
