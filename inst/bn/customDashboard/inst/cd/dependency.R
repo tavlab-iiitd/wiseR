@@ -8,7 +8,7 @@ dependency<-function()
   }
   if(require('igraph')==F)
   {
-    install.packages('igraph')
+    install.packages('igraph',type = "binary")
   }
   if(require('RBGL')==F)
   {
