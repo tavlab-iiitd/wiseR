@@ -6,10 +6,6 @@ dependency<-function()
   {
     BiocManager::install('graph')
   }
-  if(require('igraph')==F)
-  {
-    install.packages('igraph',type = "binary")
-  }
   if(require('RBGL')==F)
   {
     BiocManager::install('RBGL')

@@ -1,5 +1,3 @@
-source('dependency.R')
-dependency()
 library('bnlearn')
 library('shiny')
 library('shinydashboard')
@@ -10,6 +8,7 @@ library('shinyalert')
 library('rintrojs')
 library("HydeNet")
 library("rhandsontable")
+library('igraph')
 source('graph.custom.decision.R')
 source('error.bar.R')
 source('graph.custom.R')
@@ -28,7 +27,6 @@ shinyServer(function(input, output,session) {
   withProgress(message = "checking for dependencies... (may take longer on first installation)", value = 0, {
     dependency()
   })
-  library('igraph')
   library('gRain')
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options

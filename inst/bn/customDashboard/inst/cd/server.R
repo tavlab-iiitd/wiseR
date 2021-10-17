@@ -7,6 +7,7 @@ library('visNetwork')
 library('shinyWidgets')
 library('tools')
 library('shinyalert')
+library('igraph')
 library('shinycssloaders')
 library('rintrojs')
 library('arules')
@@ -27,7 +28,7 @@ shinyServer(function(input, output,session) {
   withProgress(message = "Starting app for the first time, installing one-time dependencies, please be patient...", value = 0, {
     dependency()
   })
-  library('igraph')
+
   library('gRain')
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
