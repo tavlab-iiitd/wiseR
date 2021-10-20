@@ -1,7 +1,6 @@
 library('bnlearn')
 library('shiny')
 library('shinydashboard')
-library('visNetwork')
 library('shinyWidgets')
 library("shinyBS")
 library('shinyalert')
@@ -28,6 +27,7 @@ shinyServer(function(input, output,session) {
     dependency()
   })
   library('gRain')
+  library('visNetwork')
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
   dependency()

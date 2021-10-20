@@ -3,7 +3,6 @@ library('rhandsontable')
 library('shiny')
 library('shinydashboard')
 library('dplyr')
-library('visNetwork')
 library('shinyWidgets')
 library('tools')
 library('shinyalert')
@@ -30,6 +29,8 @@ shinyServer(function(input, output,session) {
   })
 
   library('gRain')
+  library('visNetwork')
+
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
   options(shiny.maxRequestSize=1500*1024^2)

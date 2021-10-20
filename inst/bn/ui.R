@@ -1,7 +1,7 @@
 library('bnlearn')
 library('shiny')
 library('shinydashboard')
-library('visNetwork')
+#library('visNetwork')
 library('shinyWidgets')
 library("shinyBS")
 library('shinyalert')

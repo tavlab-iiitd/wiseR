@@ -20,7 +20,7 @@ graph.custom <- function(NetworkGraph,nodeNames,shapeVector,EvidenceNode,EventNo
                           to = NetworkGraph$to,
                           title=w,
                           value=val)
-    return(visNetwork(visNodes, visEdges, width = "100%",height = 500) %>%
+    return(visNetwork(visNodes, visEdges, width = "100%") %>%
              visEdges(arrows ="to",smooth = T,color = list(color = "grey",highlight = "black",hover = "black"),scaling=list(min=0,max=1))%>%
              visGroups(groupname = "not in use", color = list(background = "lightblue",highlight = 'blue', hover = "blue")) %>%
              visGroups(groupname = "Event", color = list(background = "lightgreen",highlight = "green", hover = "green"))%>%
