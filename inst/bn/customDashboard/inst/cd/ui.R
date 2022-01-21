@@ -3,7 +3,7 @@ library('rhandsontable')
 library('shiny')
 library('shinydashboard')
 library('dplyr')
-#library('visNetwork')
+library('visNetwork')
 library('shinyWidgets')
 library('tools')
 library('shinyalert')
@@ -71,7 +71,7 @@ dashboardPage(skin = "blue",
                               shinydashboard::tabItem(tabName = "Structure",
                                                           tabBox(id = "visula_tabs",
                                                                  width = 12,
-                                                                 tabPanel("Bayesian Network",
+                                                                 tabPanel("Structure",
                                                                           fluidPage(
                                                                             shiny::fluidRow(
                                                                               shiny::column(2, dropdownButton(
@@ -100,13 +100,13 @@ dashboardPage(skin = "blue",
                                                                                 label = "Inference Learning",circle = F, status = "primary", icon = icon("chart-bar"), width = "500px",tooltip = tooltipOptions(title = "Learn Inferences")
                                                                               )),
                                                                               shiny::column(9,shinyWidgets::radioGroupButtons(inputId = "bayesianOption",
-                                                                                                                              choices = c("Bayesian Network","Fitted Local Distributions", "Infer Decisions"),
-                                                                                                                              selected = "Bayesian Network",
+                                                                                                                              choices = c("Structure","Fitted Local Distributions", "Infer Decisions"),
+                                                                                                                              selected = "Structure",
                                                                                                                               justified = FALSE
                                                                               ))
                                                                               ),
                                                                             shiny::conditionalPanel(
-                                                                              "input.bayesianOption=='Bayesian Network'",
+                                                                              "input.bayesianOption=='Structure'",
                                                                               shiny::column(11,
                                                                                             shiny::fluidRow(
 

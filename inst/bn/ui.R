@@ -1,7 +1,7 @@
 library('bnlearn')
 library('shiny')
 library('shinydashboard')
-#library('visNetwork')
+library('visNetwork')
 library('shinyWidgets')
 library("shinyBS")
 library('shinyalert')
@@ -276,7 +276,7 @@ dashboardPage(skin = "blue",
                                                                             shinycssloaders::withSpinner(DT::dataTableOutput("assocTable"),color = "#2E86C1")
                                                                           )
                                                                  ),
-                                                                 tabPanel("Bayesian Network",
+                                                                 tabPanel("Structure",
                                                                           fluidPage(
                                                                             shiny::fluidRow(
                                                                               shiny::column(2,dropdownButton(
@@ -480,13 +480,13 @@ dashboardPage(skin = "blue",
                                                                                 label = "Inference Learning",circle = F, status = "primary", icon = icon("chart-bar"), width = "500px",tooltip = tooltipOptions(title = "Learn Inferences")
                                                                               )),
                                                                               shiny::column(7,shinyWidgets::radioGroupButtons(inputId = "bayesianOption",
-                                                                                                                              choices = c("Bayesian Network","Consensus Plot","Fitted Local Distributions", "Infer Decisions","Export Tables"),
-                                                                                                                              selected = "Bayesian Network",
+                                                                                                                              choices = c("Structure","Consensus Plot","Fitted Local Distributions", "Infer Decisions","Export Tables"),
+                                                                                                                              selected = "Structure",
                                                                                                                               justified = FALSE
                                                                               ))
                                                                               ),
                                                                             shiny::conditionalPanel(
-                                                                              "input.bayesianOption=='Bayesian Network'",
+                                                                              "input.bayesianOption=='Structure'",
                                                                               shiny::column(12,
                                                                                             shiny::fluidRow(
 
@@ -637,11 +637,9 @@ dashboardPage(skin = "blue",
                                                  ),
                                           column(4,
                                                  h4('Tavpritesh Sethi'),
-                                                 h5('Visiting Assistant Professor, Stanford Medicine'),
-                                                 h5('Assistant Professor, IIIT-Delhi'),
-                                                 h5('tavsethi@stanford.edu | tavpriteshsethi@iiitd.ac.in'),
+                                                 h5('Associate Professor, IIIT-Delhi'),
+                                                 h5('tavpriteshsethi@iiitd.ac.in'),
                                                  fluidRow(width = 12,
-                                                          column(width=2, a(img(src = "email.png", style = "margin:5px; width: 20px; height: 20px"), href = "mailto:tavsethi@stanford.edu"), target = "_blank"),
                                                           column(width=2, a(img(src = "email.png", style = "margin:5px; width: 20px; height: 20px"), href = "mailto:tavpriteshsethi@iiitd.ac.in"), target = "_blank"),
                                                           column(width=2, a(img(src = "github.png", width = '30px', height = '30px'), href = "https://github.com/SAFE-ICU?tab=repositories"), target = "_blank"),
                                                           column(width=2, a(img(src = "facebook.png", style = "margin:5px; width: 20px; height: 20px"), href = "https://www.facebook.com/tavpritesh.sethi"), target = "_blank"),
@@ -680,7 +678,7 @@ dashboardPage(skin = "blue",
                                                 a(img(src = "github.png", width = '30px', height = '30px'), href = "https://github.com/anant15"),
                                                 hr(),
                                                 h3('Reference'),
-                                                h5('wiseR: A Framework for Learning and Deploying Decisions With Probabilistic Graphical Models'),
+                                                h5('wiseR: An open-source graphical modeling, decision analysis and deployment framework for biomedical datasets'),
                                                 hr(),
                                                 h3('Acknowlegments'),
                                                 h5("Rakesh Lodha, Professor (Pediatrics), All India Institute of Medical Sciences, New Delhi, India"),
