@@ -44,4 +44,7 @@ dependency<-function()
     #conda_install("wiser", "scipy")
     #conda_install("wiser", "scikit-learn")
   }
+  if(packageVersion("visNetwork")!='2.0.9'){
+    install.packages("visNetwork_2.0.9.tar.gz",repos=NULL, type="source")
+  }
 }

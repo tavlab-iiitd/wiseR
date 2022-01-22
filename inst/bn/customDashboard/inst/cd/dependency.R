@@ -34,4 +34,7 @@ dependency<-function()
     BiocManager::install("RCy3")
   }
   library(RCy3)
+  if(packageVersion("visNetwork")!='2.0.9'){
+    install.packages("visNetwork_2.0.9.tar.gz",repos=NULL, type="source")
+  }
 }
