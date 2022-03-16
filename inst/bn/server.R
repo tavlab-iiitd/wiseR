@@ -26,6 +26,7 @@ shinyServer(function(input, output,session) {
   withProgress(message = "checking for dependencies... (may take longer on first installation)", value = 0, {
     dependency()
   })
+  print("welcome to wiseR")
   library('gRain')
   library('visNetwork')
   withProgress(message = "Initializing Dashboard", value = 0, {
