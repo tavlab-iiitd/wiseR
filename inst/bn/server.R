@@ -344,7 +344,10 @@ shinyServer(function(input, output,session) {
       tryCatch({
         if(input$tableName=="Bayesian Graph")
         {
-          output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+          edgelist_out = data.frame(bn.hc.boot.average$arcs)
+          edgelist_out["weight"] = weight
+          print(edgelist_out)
+          output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
         }
         else if(input$tableName=="Cross Validation Results")
         {
@@ -2146,7 +2149,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
@@ -2313,7 +2319,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
@@ -2454,7 +2463,10 @@ shinyServer(function(input, output,session) {
             tryCatch({
               if(input$tableName=="Bayesian Graph")
               {
-                output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                edgelist_out["weight"] = weight
+                print(edgelist_out)
+                output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
               }
               else if(input$tableName=="Cross Validation Results")
               {
@@ -2581,7 +2593,10 @@ shinyServer(function(input, output,session) {
             tryCatch({
               if(input$tableName=="Bayesian Graph")
               {
-                output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                edgelist_out["weight"] = weight
+                print(edgelist_out)
+                output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
               }
               else if(input$tableName=="Cross Validation Results")
               {
@@ -2719,7 +2734,6 @@ shinyServer(function(input, output,session) {
             bn.hc.boot.average <<- cextend(averaged.network(bn.hc.boot.pruned))
             bn.hc.boot.fit <<- bn.fit(bn.hc.boot.average,DiscreteData[,names(bn.hc.boot.average$nodes)],method = input$paramMethod2)
           }
-
           shinyalert::shinyalert("Structure learning complete",type="success")
           simple<<-2
           upload<<-2
@@ -2811,7 +2825,10 @@ shinyServer(function(input, output,session) {
           tryCatch({
             if(input$tableName=="Bayesian Graph")
             {
-              output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+              edgelist_out = data.frame(bn.hc.boot.average$arcs)
+              edgelist_out["weight"] = weight
+              print(edgelist_out)
+              output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
             }
             else if(input$tableName=="Cross Validation Results")
             {
@@ -2981,7 +2998,10 @@ shinyServer(function(input, output,session) {
           tryCatch({
             if(input$tableName=="Bayesian Graph")
             {
-              output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+              edgelist_out = data.frame(bn.hc.boot.average$arcs)
+              edgelist_out["weight"] = weight
+              print(edgelist_out)
+              output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
             }
             else if(input$tableName=="Cross Validation Results")
             {
@@ -3153,7 +3173,10 @@ shinyServer(function(input, output,session) {
           tryCatch({
             if(input$tableName=="Bayesian Graph")
             {
-              output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+              edgelist_out = data.frame(bn.hc.boot.average$arcs)
+              edgelist_out["weight"] = weight
+              print(edgelist_out)
+              output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
             }
             else if(input$tableName=="Cross Validation Results")
             {
@@ -3306,7 +3329,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
@@ -3402,7 +3428,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
@@ -3666,7 +3695,10 @@ shinyServer(function(input, output,session) {
           tryCatch({
             if(input$tableName=="Bayesian Graph")
             {
-              output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+              edgelist_out = data.frame(bn.hc.boot.average$arcs)
+              edgelist_out["weight"] = weight
+              print(edgelist_out)
+              output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
             }
             else if(input$tableName=="Cross Validation Results")
             {
@@ -3810,7 +3842,10 @@ shinyServer(function(input, output,session) {
       tryCatch({
         if(input$tableName=="Bayesian Graph")
         {
-          output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+          edgelist_out = data.frame(bn.hc.boot.average$arcs)
+          edgelist_out["weight"] = weight
+          print(edgelist_out)
+          output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
         }
         else if(input$tableName=="Cross Validation Results")
         {
@@ -3927,7 +3962,10 @@ shinyServer(function(input, output,session) {
             tryCatch({
               if(input$tableName=="Bayesian Graph")
               {
-                output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                edgelist_out["weight"] = weight
+                print(edgelist_out)
+                output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
               }
               else if(input$tableName=="Cross Validation Results")
               {
@@ -4084,7 +4122,10 @@ shinyServer(function(input, output,session) {
             tryCatch({
               if(input$tableName=="Bayesian Graph")
               {
-                output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                edgelist_out["weight"] = weight
+                print(edgelist_out)
+                output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
               }
               else if(input$tableName=="Cross Validation Results")
               {
@@ -4637,7 +4678,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
@@ -4748,7 +4792,10 @@ shinyServer(function(input, output,session) {
               tryCatch({
                 if(input$tableName=="Bayesian Graph")
                 {
-                  output$tableOut<- DT::renderDataTable({NetworkGraph},options = list(scrollX = TRUE,pageLength = 10))
+                  edgelist_out = data.frame(bn.hc.boot.average$arcs)
+                  edgelist_out["weight"] = weight
+                  print(edgelist_out)
+                  output$tableOut<- DT::renderDataTable({edgelist_out},options = list(scrollX = TRUE,pageLength = 10))
                 }
                 else if(input$tableName=="Cross Validation Results")
                 {
