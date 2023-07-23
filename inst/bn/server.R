@@ -5,7 +5,6 @@ library('shinyWidgets')
 library("shinyBS")
 library('shinyalert')
 library('rintrojs')
-library("HydeNet")
 library("rhandsontable")
 library('igraph')
 source('graph.custom.decision.R')
@@ -29,6 +28,7 @@ shinyServer(function(input, output,session) {
   print("welcome to wiseR")
   library('gRain')
   library('visNetwork')
+  library("HydeNet")
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
   dependency()
