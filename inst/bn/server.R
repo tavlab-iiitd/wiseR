@@ -26,12 +26,11 @@ shinyServer(function(input, output,session) {
     dependency()
   })
   print("welcome to wiseR")
-  library('gRain')
-  library('visNetwork')
-  library("HydeNet")
+  
   withProgress(message = "Initializing Dashboard", value = 0, {
   #Data upload limit and other options
   dependency()
+  
   options(shiny.maxRequestSize=8000*1024^2)
   options(warn=-1)
   options("getSymbols.warning4.0"=FALSE)
@@ -41,6 +40,9 @@ shinyServer(function(input, output,session) {
   #DiscreteData <- alarm
   #trueData<-DiscreteData
   #Sanity check
+  library('gRain')
+  library('visNetwork')
+  library("HydeNet")
   sanity<-1
   confidence<-1
   check<-1
