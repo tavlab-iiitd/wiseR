@@ -14,6 +14,10 @@ dependency<-function()
   {
     install.packages("visNetwork_2.0.9.tar.gz",repos=NULL, type="source")
   }
+  if(require('HydeNet')==F)
+  {
+    install.packages("HydeNet_0.10.11.tar.gz",repos=NULL, type="source")
+  }
   if(require('RBGL')==F)
   {
     BiocManager::install('RBGL')
